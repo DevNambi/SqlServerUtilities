@@ -1,0 +1,71 @@
+function Write-TableSchemas {
+	param ([string] $Server, 
+           [string] $Database, 
+           [string] $Directory="")
+
+    if (-not ($Directory -eq ""))
+    {
+        $Directory = $Directory+"\";
+    }
+    
+    $SmoDb = $(Get-SqlDatabase -sqlserver $Server -dbName $Database)
+    Write-Host "Querying $Server.$Database";
+    
+    #Get-SqlTable gets the SMO SQL table. We then loop through each table
+	Get-SqlTable $SmoDb | Foreach-Object {
+        #The file name is the directory, plus the schema name and table name
+        $fileName=$Directory+$_.Schema.Replace("\","")+"."+$_.Name+".sql"; 
+        #The .Script() method does the work for us. Then we just output the script.
+        Write-Host "Writing create table statement for $_"; 
+        $_.Script() | Out-File -FilePath $fileName;
+        };
+}
+
+#Example: Write-BcpFormatFiles -Server localhost -Database model -Directory C:\ -BcpFlags "-T -N -x"
+function Write-BcpFormatFiles {
+    param ([string] $Server, 
+           [string] $Database, 
+           [string] $Directory="", 
+           [string] $BcpFlags="-T -x -N")
+    
+    #if the directory is specified, add a \ to its location
+    if (-not ($Directory -eq ""))
+    {
+        $Directory = $Directory+"\";
+    }
+    
+    $SmoDb = $(Get-SqlDatabase -sqlserver $Server -dbName $Database)
+    Write-Host "Querying $Server.$Database";
+    
+    Get-SqlTable $SmoDb | Foreach-Object { 
+    $tableName="["+$Database+"].["+$_.Schema+"].["+$_.Name+"]"; 
+    $fileName=$Directory+$Database+"."+$_.Schema.Replace("\","")+"."+$_.Name+".format.xml"; 
+    $bcpCall = "bcp.exe "+$tableName+" format nul "+$BcpFlags+" -S "+$Server+" -f "+$fileName; 
+    Write-Host "Now calling $bcpCall";
+    Invoke-Expression $bcpCall; }
+}
+
+
+#Example: Export-TablesToBcpFiles -Server localhost -Database model -Directory C:\ -BcpFlags "-T -N"
+
+function Export-TablesToBcpFiles {
+    param ([string] $Server, 
+           [string] $Database, 
+           [string] $Directory="", 
+           [string] $BcpFlags="-T -N")    
+    
+    #if the directory is specified, add a \ to its location
+    if (-not ($Directory -eq ""))
+    {
+        $Directory = $Directory+"\";
+    }
+    
+    $SmoDb = Get-SqlDatabase $Server $Database;
+    
+    Get-SqlTable $SmoDb | Foreach-Object { 
+    $tableName="["+$Database+"].["+$_.Schema+"].["+$_.Name+"]"; 
+    $fileName='"'+$Directory+$Database+"."+$_.Schema.Replace("\","")+"."+$_.Name+'.bcp"'; 
+    $bcpCall = "bcp.exe "+$tableName+" out "+$fileName+" -S "+$Server+" "+$BcpFlags; 
+    Write-Host "Now calling $bcpCall";
+    Invoke-Expression $bcpCall; }
+}

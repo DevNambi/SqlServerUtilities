@@ -1,0 +1,15 @@
+Modes:
+- Apply
+- Audit
+- Get config
+- Test apply, print out the commands
+
+Config notes
+- What the options are, include descriptions
+- Have sample configs for different environments
+
+Features
+- Have notes? In a later version
+- Make it a Powershell script? 
+	That way it can be run on many different servers?
+	Especially useful for audit and get-config mode

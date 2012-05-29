@@ -1,0 +1,11 @@
+Features:
+
+- Backs up using Ola's scripts
+- Restores using Ola's scripts
+- Runs a checkdb
+- Scripts out all indexes, stores their definitions in metadata
+- Drops all indexes except PK and clustered
+- Backs up again using Ola's scripts
+- Restores again using Ola's scripts
+- Runs DBCC CHECKDB
+- Then, optionally, drops a DB

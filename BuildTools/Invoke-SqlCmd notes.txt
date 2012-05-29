@@ -1,0 +1,7 @@
+Invoke-SqlCmd 
+	-InputFile "C:\DmReport\FactSubConfig.sql"
+	(or -Query "select getdate() as TimeQueryWasRun")
+	| out-file "DeploymentLog.txt"
+	-Database DmReport
+	-ConnectionTimeout 30 ##30 seconds
+	-ServerInstance SEA1DM06

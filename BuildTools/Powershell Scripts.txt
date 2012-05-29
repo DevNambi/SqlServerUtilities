@@ -1,0 +1,30 @@
+# Write table definitions to files
+Get-SqlTable $(Get-SqlDatabase "tldusrdevgen277" "AdManager") | Foreach-Object {$fileName=$_.Schema.Replace("\","")+"."+$_.Name+".txt"; $_.Script() | Out-File -FilePath $fileName}
+
+#Get BCP format files for each table
+$dbName = "AdManager"
+Get-SqlTable $(Get-SqlDatabase "tldusrdevgen277" $dbName) | Foreach-Object { $tableName="["+$dbName+"].["+$_.Schema+"].["+$_.Name+"]"; $fileName=$dbName+"."+$_.Schema.Replace("\","")+"."+$_.Name+".format.xml"; $bcpCall = "bcp.exe "+$tableName+" format nul -T -x -S tldusrdevgen277 -N -f "+$fileName; Invoke-Expression $bcpCall; }
+
+#Get the files themselves via bcp-out in native mode
+$dbName="AdManager";
+Get-SqlTable $(Get-SqlDatabase "tldusrdevgen277" $dbName) | Foreach-Object { 
+$tableName="["+$dbName+"].["+$_.Schema+"].["+$_.Name+"]"; 
+$fileName='"'+$dbName+"."+$_.Schema.Replace("\","")+"."+$_.Name+'.bcp"'; 
+$bcpCall = "bcp.exe "+$tableName+" out "+$fileName+" -T -S tldusrdevgen277 -N"; 
+Invoke-Expression $bcpCall; }
+
+#Now create the tables
+$directory="C:\"
+$dbName="AdManager";
+Get-ChildItem $directory | Where-Object {$_.Name -match ".txt"} | Foreach-Object {
+	Invoke-SqlCmd -ServerInstance Displaymart-1 -Database $dbName -InputFile $_.FullName -Verbose;
+}
+
+#Now load the files
+Get-SqlTable $(Get-SqlDatabase "Displaymart-1" "AdManager") | Foreach-Object {
+	$tableName="["+$dbName+"].["+$_.Schema+"].["+$_.Name+"]";
+	$bcpFileName='"'+$dbName+"."+$_.Schema.Replace("\","")+"."+$_.Name+'.bcp"'; 
+	$formatFileName=$dbName+"."+$_.Schema.Replace("\","")+"."+$_.Name+".format.xml";
+	$dbName+"."+$_.Schema.Replace("\","")+"."+$_.Name+".format.xml";
+	$bcpCall="bcp.exe "+$tableName+" in "+$bcpFileName+" -T -N -S DisplayMart-1 -f "+$formatFileName
+}
