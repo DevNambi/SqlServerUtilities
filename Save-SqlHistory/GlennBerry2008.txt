@@ -1,0 +1,3 @@
+[Poll Time]=getdate(), [Server Name]=@@ServerName,
+
+
