@@ -1,46 +1,44 @@
-CsvLocation,QueryOrFile,Group,Name
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-AdHocQueryPlans.csv,C:\Code\SqlServerUtilities\PowershellQuerier\AdHocQueryPlans.sql,Foo,AdHocQueryPlans
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-AverageTaskCounts.csv,C:\Code\SqlServerUtilities\PowershellQuerier\AverageTaskCounts.sql,Foo,AverageTaskCounts
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-BufferPoolUsagePerDb.csv,C:\Code\SqlServerUtilities\PowershellQuerier\BufferPoolUsagePerDb.sql,Foo,BufferPoolUsagePerDb
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-BufferPoolUsagePerIndex.csv,C:\Code\SqlServerUtilities\PowershellQuerier\BufferPoolUsagePerIndex.sql,Foo,BufferPoolUsagePerIndex
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-CpuUsagePerDatabase.csv,C:\Code\SqlServerUtilities\PowershellQuerier\CpuUsagePerDatabase.sql,Foo,CpuUsagePerDatabase
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-DatabaseConfigInfo.csv,C:\Code\SqlServerUtilities\PowershellQuerier\DatabaseConfigInfo.sql,Foo,DatabaseConfigInfo
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-DatabaseFilePerf.csv,C:\Code\SqlServerUtilities\PowershellQuerier\DatabaseFilePerf.sql,Foo,DatabaseFilePerf
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-DatabaseVolumeInfo.csv,C:\Code\SqlServerUtilities\PowershellQuerier\DatabaseVolumeInfo.sql,Foo,DatabaseVolumeInfo
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-Db-FileSizesAndSpace.csv,C:\Code\SqlServerUtilities\PowershellQuerier\Db-FileSizesAndSpace.sql,Foo,Db-FileSizesAndSpace
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-Db-IOStalls.csv,C:\Code\SqlServerUtilities\PowershellQuerier\Db-IOStalls.sql,Foo,Db-IOStalls
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-Db-TopCachedQueriesByExecCount.csv,C:\Code\SqlServerUtilities\PowershellQuerier\Db-TopCachedQueriesByExecCount.sql,Foo,Db-TopCachedQueriesByExecCount
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-IndexFragmentation.csv,C:\Code\SqlServerUtilities\PowershellQuerier\IndexFragmentation.sql,Foo,IndexFragmentation
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-IndexStats-Writes.csv,C:\Code\SqlServerUtilities\PowershellQuerier\IndexStats-Writes.sql,Foo,IndexStats-Writes
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-IndexStats.csv,C:\Code\SqlServerUtilities\PowershellQuerier\IndexStats.sql,Foo,IndexStats
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-Logins.csv,C:\Code\SqlServerUtilities\PowershellQuerier\Logins.sql,Foo,Logins
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-MemoryClerkUsage.csv,C:\Code\SqlServerUtilities\PowershellQuerier\MemoryClerkUsage.sql,Foo,MemoryClerkUsage
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-MemoryGrantsOutstanding.csv,C:\Code\SqlServerUtilities\PowershellQuerier\MemoryGrantsOutstanding.sql,Foo,MemoryGrantsOutstanding
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-MemoryGrantsPending.csv,C:\Code\SqlServerUtilities\PowershellQuerier\MemoryGrantsPending.sql,Foo,MemoryGrantsPending
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-MissingIndexes.csv,C:\Code\SqlServerUtilities\PowershellQuerier\MissingIndexes.sql,Foo,MissingIndexes
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-PageLifeExpectancy.csv,C:\Code\SqlServerUtilities\PowershellQuerier\PageLifeExpectancy.sql,Foo,PageLifeExpectancy
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-PossibleBadIndexes.csv,C:\Code\SqlServerUtilities\PowershellQuerier\PossibleBadIndexes.sql,Foo,PossibleBadIndexes
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SignalWaits.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SignalWaits.sql,Foo,SignalWaits
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SqlConfigValues.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SqlConfigValues.sql,Foo,SqlConfigValues
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SqlFileInfo.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SqlFileInfo.sql,Foo,SqlFileInfo
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SqlHardwareInfo.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SqlHardwareInfo.sql,Foo,SqlHardwareInfo
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SqlInstallDate.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SqlInstallDate.sql,Foo,SqlInstallDate
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SqlMemoryDumps.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SqlMemoryDumps.sql,Foo,SqlMemoryDumps
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SqlMemorySpace.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SqlMemorySpace.sql,Foo,SqlMemorySpace
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SqlRegistryInfo.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SqlRegistryInfo.sql,Foo,SqlRegistryInfo
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SqlServerInstanceProperties.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SqlServerInstanceProperties.sql,Foo,SqlServerInstanceProperties
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SqlServices.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SqlServices.sql,Foo,SqlServices
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-StatsLastUpdated.csv,C:\Code\SqlServerUtilities\PowershellQuerier\StatsLastUpdated.sql,Foo,StatsLastUpdated
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-SystemMemoryState.csv,C:\Code\SqlServerUtilities\PowershellQuerier\SystemMemoryState.sql,Foo,SystemMemoryState
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-TablesRowsAndCompression.csv,C:\Code\SqlServerUtilities\PowershellQuerier\TablesRowsAndCompression.sql,Foo,TablesRowsAndCompression
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-TopCachedSPsByAvgTime.csv,C:\Code\SqlServerUtilities\PowershellQuerier\TopCachedSPsByAvgTime.sql,Foo,TopCachedSPsByAvgTime
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-TopCachedSpsByExecCount.csv,C:\Code\SqlServerUtilities\PowershellQuerier\TopCachedSpsByExecCount.sql,Foo,TopCachedSpsByExecCount
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-TopCachedSpsByLogicalReads.csv,C:\Code\SqlServerUtilities\PowershellQuerier\TopCachedSpsByLogicalReads.sql,Foo,TopCachedSpsByLogicalReads
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-TopCachedSpsByPhysicalReads.csv,C:\Code\SqlServerUtilities\PowershellQuerier\TopCachedSpsByPhysicalReads.sql,Foo,TopCachedSpsByPhysicalReads
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-TopCachedSPsByVariability.csv,C:\Code\SqlServerUtilities\PowershellQuerier\TopCachedSPsByVariability.sql,Foo,TopCachedSPsByVariability
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-TopCachedSPsbyWorkerTime.csv,C:\Code\SqlServerUtilities\PowershellQuerier\TopCachedSPsbyWorkerTime.sql,Foo,TopCachedSPsbyWorkerTime
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-TopCachedSPsByWrites.csv,C:\Code\SqlServerUtilities\PowershellQuerier\TopCachedSPsByWrites.sql,Foo,TopCachedSPsByWrites
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-TopStatementsByIO.csv,C:\Code\SqlServerUtilities\PowershellQuerier\TopStatementsByIO.sql,Foo,TopStatementsByIO
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-Version.csv,C:\Code\SqlServerUtilities\PowershellQuerier\Version.sql,Foo,Version
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-WaitsStats.csv,C:\Code\SqlServerUtilities\PowershellQuerier\WaitsStats.sql,Foo,WaitsStats
-C:\Code\SqlServerUtilities\PowershellQuerier\Logs-WindowsVersion.csv,C:\Code\SqlServerUtilities\PowershellQuerier\WindowsVersion.sql,Foo,WindowsVersion
+CsvLocation,QueryOrFile
+.\Output\Database - Bad NC Indexes.csv,.\Queries\Database - Bad NC Indexes.sql
+.\Output\Database - Buffer Pool Use By Table.csv,.\Queries\Database - Buffer Pool Use By Table.sql
+.\Output\Database - File Sizes and Space.csv,.\Queries\Database - File Sizes and Space.sql
+.\Output\Database - Index Fragmentation.csv,.\Queries\Database - Index Fragmentation.sql
+.\Output\Database - Index Read-Write Stats.csv,.\Queries\Database - Index Read-Write Stats.sql
+.\Output\Database - IO Stats Per File.csv,.\Queries\Database - IO Stats Per File.sql
+.\Output\Database - Last Full Backup.csv,.\Queries\Database - Last Full Backup.sql
+.\Output\Database - Stats Last Updated.csv,.\Queries\Database - Stats Last Updated.sql
+.\Output\Database - T-Log Size and Space.csv,.\Queries\Database - T-Log Size and Space.sql
+.\Output\Database - Table Sizes and Rowcounts.csv,.\Queries\Database - Table Sizes and Rowcounts.sql
+.\Output\Server - Average Task Count.csv,.\Queries\Server - Average Task Count.sql
+.\Output\Server - Buffer Pool Usage By DB.csv,.\Queries\Server - Buffer Pool Usage By DB.sql
+.\Output\Server - Cluster Info.csv,.\Queries\Server - Cluster Info.sql
+.\Output\Server - Cluster Node Info.csv,.\Queries\Server - Cluster Node Info.sql
+.\Output\Server - CPU Utilization By DB.csv,.\Queries\Server - CPU Utilization By DB.sql
+.\Output\Server - CPU Utilization History.csv,.\Queries\Server - CPU Utilization History.sql
+.\Output\Server - Error Log Location.csv,.\Queries\Server - Error Log Location.sql
+.\Output\Server - File Names and Paths.csv,.\Queries\Server - File Names and Paths.sql
+.\Output\Server - Hardware Info.csv,.\Queries\Server - Hardware Info.sql
+.\Output\Server - Internal Memory State.csv,.\Queries\Server - Internal Memory State.sql
+.\Output\Server - Memory Clerk Usage.csv,.\Queries\Server - Memory Clerk Usage.sql
+.\Output\Server - Memory Dump Info.csv,.\Queries\Server - Memory Dump Info.sql
+.\Output\Server - Memory Grants Outstanding.csv,.\Queries\Server - Memory Grants Outstanding.sql
+.\Output\Server - Memory Grants Pending.csv,.\Queries\Server - Memory Grants Pending.sql
+.\Output\Server - Memory State.csv,.\Queries\Server - Memory State.sql
+.\Output\Server - Page Life Expectancy.csv,.\Queries\Server - Page Life Expectancy.sql
+.\Output\Server - Possible Missing Indexes By Query.csv,.\Queries\Server - Possible Missing Indexes By Query.sql
+.\Output\Server - Possible Missing Indexes.csv,.\Queries\Server - Possible Missing Indexes.sql
+".\Output\Server - Recovery, Logs, Compat Level.csv",".\Queries\Server - Recovery, Logs, Compat Level.sql"
+.\Output\Server - Sessions Per Login.csv,.\Queries\Server - Sessions Per Login.sql
+.\Output\Server - Signal Waits.csv,.\Queries\Server - Signal Waits.sql
+.\Output\Server - Sp_Configure Values.csv,.\Queries\Server - Sp_Configure Values.sql
+.\Output\Server - SQL Install Date.csv,.\Queries\Server - SQL Install Date.sql
+.\Output\Server - SQL Registry.csv,.\Queries\Server - SQL Registry.sql
+.\Output\Server - SQL Server Properties.csv,.\Queries\Server - SQL Server Properties.sql
+.\Output\Server - SQL Services.csv,.\Queries\Server - SQL Services.sql
+.\Output\Server - SQL Version.csv,.\Queries\Server - SQL Version.sql
+.\Output\Server - Stalls Per File.csv,.\Queries\Server - Stalls Per File.sql
+.\Output\Server - TCP Listener.csv,.\Queries\Server - TCP Listener.sql
+.\Output\Server - Top Ad-Hoc Plans.csv,.\Queries\Server - Top Ad-Hoc Plans.sql
+.\Output\Server - Volume Info.csv,.\Queries\Server - Volume Info.sql
+.\Output\Server - Wait Stats.csv,.\Queries\Server - Wait Stats.sql
+.\Output\Server - Windows Info.csv,.\Queries\Server - Windows Info.sql

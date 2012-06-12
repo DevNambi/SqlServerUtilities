@@ -1,4 +1,5 @@
 Server,Database
 .,master
-DEV,AdventureWorks2012
-DEV,AdventureWorks2008
+MyTestServer,AdventureWorks2008
+MyDevServer,AdventureWorks2008R2
+MyProdServer\ProdInstance,AdventureWorks2005
