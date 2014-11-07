@@ -1,12 +1,14 @@
 /* This is a simple script to demonstrate 
-how to compute Jaccard similarity coefficient
-(https://en.wikipedia.org/wiki/Levenshtein_distance)
+how to compute Sorenson similarity 
+(http://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient)
 using T-SQL.
 
 It can be easily wrapped into a scalar function.
 
-Jaccard Similarity: sum(in common) / sum(total)
+Sorenson-Dice similarity: sum(letters in common) / ( length(first string) + length(second string) )
 
+
+WARNING: this implementation is *location sensitive*. Extra spaces and typos will throw this off.
 */
 
 declare @String1 varchar(4000)
@@ -35,20 +37,12 @@ distance as (
             WHEN SUBSTRING(@String1,n,1) = SUBSTRING(@String2,n,1)
             THEN 1 ELSE 0
             END
-         ,String1Letter = SUBSTRING(@String1,n,1)
-         ,String2Letter = SUBSTRING(@String2,n,1)
-         ,n
+         ,String1Length = len(@String1)
+		 ,String2Length = len(@String2)		 
    from nums
    where nums.n <= @MaxLength
 )
 
-/* 
--- Uncomment this to see which letters don't match.
-*/
-
-select sum(IsSameLetter) * 1.0 --the number of letters that match
-	/ max(n) -- the total number of letters
+select sum(IsSameLetter) * 1.0
+	/ (max(String1Length) + max(String2Length))
 from distance
-
-
-
